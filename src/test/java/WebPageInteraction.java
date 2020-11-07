@@ -93,11 +93,8 @@ public class WebPageInteraction {
         forgotSection.enterEmail();
         forgotSection.clickSearchButton();
 
-        // This will capture error message
         String actual_msg=driver.findElement(By.xpath("//html[@id='facebook']//form[@id='identify_yourself_flow']//div[.='No Search Results']")).getText();
-        // Store message in variable
         String expect="No Search Results";
-        // Verify error message
         Assert.assertEquals(actual_msg, expect);
         driver.close();
     }
